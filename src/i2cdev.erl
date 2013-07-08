@@ -1,5 +1,5 @@
 -module(i2cdev).
--export([init/0, setup/1, close/1, read/1, write/2, write_reg8/3, write_reg16/3, read_reg8/2, read_reg16/2]).
+-export([init/0, setup/1, close/0, read/0, write/1, write_reg8/2, write_reg16/2, read_reg8/1, read_reg16/1]).
 -on_load(init/0).
 
 -define(APPNAME, i2cdev).
@@ -16,23 +16,23 @@ init() ->
 setup(_Device) ->
     erlang:nif_error(nif_not_loaded).
 
-close(_Device) ->
+close() ->
     erlang:nif_error(nif_not_loaded).
 
-read(_Device) ->
+read() ->
     erlang:nif_error(nif_not_loaded).
 
-write(_Device, _Data) ->
+write(_Data) ->
     erlang:nif_error(nif_not_loaded).
 
-write_reg8(_Device, _Register, _Data) ->
+write_reg8(_Register, _Data) ->
     erlang:nif_error(nif_not_loaded).
 
-write_reg16(_Device, _Register, _Data) ->
+write_reg16(_Register, _Data) ->
     erlang:nif_error(nif_not_loaded).
 
-read_reg8(_Device, _Register) ->
+read_reg8(_Register) ->
     erlang:nif_error(nif_not_loaded).
 
-read_reg16(_Device, _Register) ->
+read_reg16(_Register) ->
     erlang:nif_error(nif_not_loaded).
