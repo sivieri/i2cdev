@@ -1,4 +1,5 @@
-ebin
-*.so
-*.o
-.settings
+ebin/*.app
+ebin/*.beam
+priv/*.so
+c_src/*.o
+/ebin
